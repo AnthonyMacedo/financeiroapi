@@ -103,7 +103,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>financeiro-api</finalName>
 		
 		<plugins>
 			<plugin>
