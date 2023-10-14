@@ -1,6 +1,6 @@
 CREATE ROLE dbamaster with
     LOGIN
-    SENHA 'admin'
+    password 'admin'
     SUPERUSER;
 
 CREATE TABLE IF NOT EXISTS sch_sistema.categoria (
