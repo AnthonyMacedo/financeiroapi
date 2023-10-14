@@ -1,7 +1,12 @@
-CREATE ROLE dbamaster with
-    LOGIN
-    password 'admin'
-    SUPERUSER;
+CREATE ROLE dbamaster WITH 
+	SUPERUSER
+	CREATEDB
+	CREATEROLE
+	INHERIT
+	LOGIN
+	REPLICATION
+	BYPASSRLS
+	CONNECTION LIMIT -1;
 
 CREATE TABLE IF NOT EXISTS sch_sistema.categoria (
     id bigserial NOT NULL,
