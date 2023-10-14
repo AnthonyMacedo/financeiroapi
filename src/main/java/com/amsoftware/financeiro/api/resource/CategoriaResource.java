@@ -36,7 +36,7 @@ public class CategoriaResource {
 	private ApplicationEventPublisher publisher;
 
 	@GetMapping
-	@PreAuthorize("hasAuthority('TESTE_PERMISSAO') and hasAuthority('SCOPE_read')" )
+	@PreAuthorize("hasAuthority('ROLE_PESQUISA_CATEGORIA') and hasAuthority('SCOPE_read')" )
 	public ResponseEntity<?> buscarTodos() {
 		List<Categoria> categorias = this.categoriaService.buscarTodos();
 		return !categorias.isEmpty() ? ResponseEntity.ok(categorias) : ResponseEntity.noContent().build();
