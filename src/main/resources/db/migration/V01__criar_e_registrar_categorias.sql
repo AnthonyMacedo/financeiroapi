@@ -1,4 +1,3 @@
-
 CREATE TABLE IF NOT EXISTS sch_sistema.categoria (
     id bigserial NOT NULL,
     descricao character varying(60) NOT NULL,
