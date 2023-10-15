@@ -1,11 +1,8 @@
 FROM openjdk:11-jre-slim
+COPY . .
+RUN mvn clean package -DskipTests
 
-WORKDIR /app
-
-ARG JAR_FILE
-
-COPY target/${JAR_FILE} /app/api.jar
-
+FROM openjdk:11-jre-slim
+COPY --from=build /target/financeiro-api-0.0.1-SNAPSHOT.jar financeiro-api-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
-
-CMD ["java", "-jar", "api.jar"]
+ENTRYPOINT ["java","-jar","financeiro-api-0.0.1-SNAPSHOT.jar"]
