@@ -51,4 +51,7 @@ public class PessoaService extends AbstractServiceBase {
 		this.pessoaRepository.save(pessoaSalva);
 	}
 
+//	public Page<Pessoa> findByNomeContaining(String nome, Pageable pageable) {
+//		return pessoaRepository.findByNomeContaining(nome, pageable);
+//	}
 }

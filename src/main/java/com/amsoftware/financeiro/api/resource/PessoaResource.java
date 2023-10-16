@@ -87,4 +87,9 @@ public class PessoaResource {
 		this.pessoaService.remover(id);
 	}
 
+//	@GetMapping("/pesquisar")
+//	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_PESSOA')")
+//	public Page<Pessoa> pesquisar(@RequestParam(required = false, defaultValue = "") String nome, Pageable pageable) {
+//		return pessoaService.findByNomeContaining(nome, pageable);
+//	}
 }
